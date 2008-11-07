@@ -1,7 +1,7 @@
 %define name glrr
 %define version 0
 %define date 20050529
-%define rel 1
+%define rel 2
 %define release %mkrel 0.%{date}.1
 %define distname %{name}-%{date}
 %define common_description glrr is a set of utility functions for glib, gobject, and gtk+.
@@ -10,13 +10,12 @@
 %define libname %mklibname %{name} %{major}
 %define develname %mklibname %{name} -d
 
-%define _disable_ld_no_undefined 1
-
 Summary: Utility functions for glib, gobject, and gtk+
 Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: %{distname}.tar.bz2
+Patch0: glrr-20050529-underlinking.patch
 License: BSD
 Group: System/Libraries
 Url: http://sourceforge.net/projects/grift/
@@ -51,6 +50,8 @@ applications which will use %{name}.
 
 %prep
 %setup -q -n %{distname}
+%patch0 -p1 -b .underlinking
+autoreconf
 
 %build
 %configure
