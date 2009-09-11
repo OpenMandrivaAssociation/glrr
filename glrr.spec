@@ -1,7 +1,7 @@
 %define name glrr
 %define version 0
 %define date 20050529
-%define rel 2
+%define rel 3
 %define release %mkrel 0.%{date}.%{rel}
 %define distname %{name}-%{date}
 %define common_description glrr is a set of utility functions for glib, gobject, and gtk+.
