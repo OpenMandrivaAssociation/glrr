@@ -1,0 +1,33 @@
+diff -p -up glrr-20050529/src/glrr-glib/Makefile.am.underlinking glrr-20050529/src/glrr-glib/Makefile.am
+--- glrr-20050529/src/glrr-glib/Makefile.am.underlinking	2005-05-29 07:25:52.000000000 +0200
++++ glrr-20050529/src/glrr-glib/Makefile.am	2008-11-07 09:12:54.000000000 +0100
+@@ -8,6 +8,7 @@ glrr_glibinclude_HEADERS = $(libglrr_gli
+ INCLUDES = $(libglrr_glib_includes)
+ 
+ libglrr_glib_la_LDFLAGS =
++libglrr_glib_la_LIBADD = @GLIB_LIBS@
+ libglrr_glib_la_SOURCES = $(libglrr_glib_sources)
+ 
+ 
+diff -p -up glrr-20050529/src/glrr-gobject/Makefile.am.underlinking glrr-20050529/src/glrr-gobject/Makefile.am
+--- glrr-20050529/src/glrr-gobject/Makefile.am.underlinking	2005-05-29 07:25:52.000000000 +0200
++++ glrr-20050529/src/glrr-gobject/Makefile.am	2008-11-07 09:14:06.000000000 +0100
+@@ -8,6 +8,7 @@ glrr_gobjectinclude_HEADERS = $(libglrr_
+ INCLUDES = $(libglrr_gobject_includes)
+ 
+ libglrr_gobject_la_LDFLAGS =
++libglrr_gobject_la_LIBADD = @GOBJECT_LIBS@
+ libglrr_gobject_la_SOURCES = $(libglrr_gobject_sources)
+ 
+ 
+diff -p -up glrr-20050529/src/glrr-gtk/Makefile.am.underlinking glrr-20050529/src/glrr-gtk/Makefile.am
+--- glrr-20050529/src/glrr-gtk/Makefile.am.underlinking	2005-05-29 07:25:52.000000000 +0200
++++ glrr-20050529/src/glrr-gtk/Makefile.am	2008-11-07 09:14:20.000000000 +0100
+@@ -8,6 +8,7 @@ glrr_gtkinclude_HEADERS = $(libglrr_gtk_
+ INCLUDES = $(libglrr_gtk_includes)
+ 
+ libglrr_gtk_la_LDFLAGS =
++libglrr_gtk_la_LIBADD = @GTK_LIBS@
+ libglrr_gtk_la_SOURCES = $(libglrr_gtk_sources)
+ 
+ 
