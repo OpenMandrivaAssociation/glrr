@@ -18,7 +18,7 @@ Source0: %{distname}.tar.bz2
 Patch0: glrr-20050529-underlinking.patch
 License: BSD
 Group: System/Libraries
-Url: http://sourceforge.net/projects/grift/
+Url: https://sourceforge.net/projects/grift/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: gtk2-devel
 
