@@ -20,6 +20,11 @@ License: BSD
 Group: System/Libraries
 Url: https://sourceforge.net/projects/grift/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: gtk2-devel
 
 %description
